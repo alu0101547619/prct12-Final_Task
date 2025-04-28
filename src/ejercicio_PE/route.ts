@@ -8,9 +8,9 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 app.post('/funko', (req, res) => {
-  const note = new Funko(req.body);
+  const funko = new Funko(req.body);
 
-  note.save().then((funko) => {
+  funko.save().then((funko) => {
     res.status(201).send(funko);
   }).catch((error) => {
     res.status(400).send(error);

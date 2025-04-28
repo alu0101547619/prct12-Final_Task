@@ -20,7 +20,7 @@ interface FunkoDocumentInterface extends Document {
   value: number
 }
 
-const NoteSchema = new Schema<FunkoDocumentInterface>({
+const FunkoSchema = new Schema<FunkoDocumentInterface>({
   ID: {
     type: Number,
     unique: true,
@@ -87,4 +87,4 @@ const NoteSchema = new Schema<FunkoDocumentInterface>({
   },
 });
 
-export const Funko = model<FunkoDocumentInterface>('Funko', NoteSchema);
+export const Funko = model<FunkoDocumentInterface>('Funko', FunkoSchema);
